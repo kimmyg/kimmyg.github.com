@@ -1,0 +1,13 @@
+body {
+	width: 520px;
+	margin: auto;
+	margin-top: 32px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: orange;
+}
