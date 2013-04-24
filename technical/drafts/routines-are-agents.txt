@@ -1,0 +1,9 @@
+Routines are Agents (and Actors)
+
+I see a lot of similarities between computation using routines and family relationships.
+
+A brother who fears his older brother is like a subroutine: He'll probably do what his other brother says, but if things get out of hand, he goes to his parents and raises a concern (exception). If the siblings have any kind of agreement set up, the parent will determine blame.
+
+Spouses are like coroutines. Neither one can control the other, and each runs the risk of leaving the other suspended, but if they work together, they can get a lot done.
+
+These analogies are bad because they don't offer any insight unless the different types of routines are well-understood and, even then, the amount of insight they offer is small.

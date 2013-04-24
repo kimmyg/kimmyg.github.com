@@ -1,0 +1,54 @@
+Continuations
+
+Rewrite this to give humans as computers examples (giving directions) and then arithmetic examples to nail it down.
+
+The purpose of this post is to explain continuations in a comprehensible way. I assume only a little programming experience.
+
+Across computer science literature, continuations are described as "the rest of the computation", but I always found this description inscrutable. (Imagine my surprise when I discovered it is perfectly apt.)
+
+For now, imagine a program simply as a list of instructions and computation as the following of that list. For instance, suppose you want to know how to get to the airport from my house.
+
+1. Turn right onto 1750 N.
+2. Turn left at 50 E.
+3. Turn right on 1600 N.
+4. Turn right onto I-15 N.
+...
+
+In a way, I am programming you with the directions. If I write the directions down, you will probably end up interpreting them. If you make sense of them as I recite them, you compile them.
+
+Now imagine that you are following these instructions and you have just completed step 2. How do you get to the airport? You follow the rest of the instructions. Since we said following the instructions was computation, following the rest is the "rest of the computation". To emphasize, steps 3 and after are the continuation of step 2.
+
+Suppose you decide to take a detour in the middle of following the instructions and become lost. You call me for instructions to get to the airport. After determining where you are, I have two options:
+
+1. Come up with a new set of instructions to get you to the airport from where you are. The smaller your detour, the more the end of the new instructions will coincide with the old ones.
+
+2. Get you back on track to the original instructions and tell you which instruction to pick up on.
+
+ and then want to get to the
+
+Notice that, in order for the rest of the instructions to take you to the airport, you must have the result of following the instructions correctly so far. For instance, suppose you turn left not on 50 E but 50 W. If this happens, you may not end up at the airport. So the correctness of the instructions depends on you being in the right place when you follow them.
+
+Now suppose you have a friend who lives a few blocks from my house and you want to stop by there on the way to the airport. After you visit, you call me and I say, "do this and this and then pick up at instruction 6".
+
+Consider the way a person would evaluate an algebraic expression such as
+[code]
+3 + (5 * 7)
+[/code]
+where the parentheses merely emphasize the intended order of operations.
+
+The person would perform the following steps:
+
+1. Multiply 5 and 7.
+2. Add 3 to the result.
+
+These are the two steps of the computation. While performing step 1, the "rest of the computation" is simply the remaining steps to be performed, i.e., step 2. To reiterate, the continuation of step 1 is the remaining steps.
+
+Notice how step 2 is expressed in terms of the result of step 1. This is intentional. Expressing it in this way might seem strange since the first step is performed so readily, so instead consider the computation steps of
+[code]
+3+\sqrt{170569}
+[/code]
+which are
+1. Find the square root of 170569.
+2. Add 3 to the result.
+
+Now, taking square roots is hard, so suppose 
