@@ -26,7 +26,8 @@
             (system "git checkout master")
             (system (format "mkdir -p ~a/~a" strand hierarchy))
             (with-output-to-file post-path
-              (λ () (display post)))
+              (λ () (display post))
+              #:exists 'replace)
             (system (format "git add ~a" post-path))
             (system (format "git commit -m \"Publish ~a.\"" name))
             #;(system "git push origin source")
