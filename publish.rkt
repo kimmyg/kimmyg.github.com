@@ -30,6 +30,5 @@
               #:exists 'replace)
             (system (format "git add ~a" post-path))
             (system (format "git commit -m \"Publish ~a.\"" name))
-            #;(system "git push origin source")
             #;(system "git push")))
         (printf "path ~a does not exist.\n" draft-path))))

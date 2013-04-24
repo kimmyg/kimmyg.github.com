@@ -16,7 +16,8 @@
 
 <head>
 <title>~a</title>
-<link rel=\"stylesheet\" href=\"style.css\"/>
+<link rel=\"stylesheet\" href=\"/style.css\"/>
+~a
 </head>
 
 <body>
@@ -24,14 +25,13 @@
 <hr/>
 ~a
 ~a
-~a
 </body>
 
 </html>
 " title
+  (google-analytics-code)
   title
   body
-  (google-analytics-code)
   (disqus-code title)))
 
 (define (google-analytics-code) "\
