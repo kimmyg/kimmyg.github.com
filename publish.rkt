@@ -20,7 +20,7 @@
           (system "git checkout source")
           (system (format "mkdir -p ~a/~a" strand hierarchy))
           (system (format "git add ~a" draft-path))
-          (system (format "git mv ~a ~a" draft-path final-path))
+          (system (format "git mv -f ~a ~a" draft-path final-path))
           (system (format "git commit -m \"Publish ~a.\"" name))
           (let ([post (render-post final-path)])
             (system "git checkout master")
