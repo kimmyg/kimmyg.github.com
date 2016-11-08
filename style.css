@@ -9,6 +9,7 @@ ul {
 
 li {
   list-style-type: none;
+  margin-bottom: 0.5em;  
 }
 
 h1 {
