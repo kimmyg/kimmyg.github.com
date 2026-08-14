@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Teaching Portfolio — Kimball Germane</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+    <style>
+      html { font-size: 17px; }
+      body {
+        font-family: Charter, Georgia, 'Times New Roman', serif;
+        line-height: 1.55;
+        color: #1a1a1a;
+        background: #fff;
+        max-width: 44em;
+        margin: 0 auto;
+        padding: 3rem 1.25rem 5rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+        line-height: 1.25;
+        margin: 0 0 0.4rem;
+      }
+      h1 + p { color: #555; margin-top: 0; }
+      h1:not(:first-child) { margin-top: 3.5rem; border-top: 2px solid #1a1a1a; padding-top: 1.5rem; }
+      h2 {
+        font-size: 1.25rem;
+        margin: 2.5rem 0 0.75rem;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 0.25rem;
+      }
+      h3 { font-size: 1.05rem; margin: 1.75rem 0 0.5rem; }
+      h4 {
+        font-size: 0.85rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #555;
+        margin: 1.25rem 0 0.4rem;
+      }
+      p { margin: 0.7rem 0; }
+      ul, ol { padding-left: 1.5rem; }
+      li { margin: 0.35rem 0; }
+      li > p { margin: 0.35rem 0; }
+      @media print {
+        html { font-size: 11pt; }
+        body { max-width: none; padding: 0; }
+        h2 { page-break-after: avoid; }
+        h3, h4 { page-break-after: avoid; }
+      }
+    </style>
+</head>
+<body>
+<h1
+id="narrative-summary-of-the-teaching-portfolio-for-rank-status-review">Narrative
+Summary of the Teaching Portfolio for Rank &amp; Status Review</h1>
+<p>Kimball Germane · Computer Science · 15 August 2026 · CFS Review</p>
+<p>The most fundamental way I have grown as an instructor is that I no
+longer adjust my courses solely by feel: I gather and respond to
+<em>feedback</em> during the semester and adjust the course each summer
+in light of all of the in- and post-semester feedback. A manifestation
+of this change is the teaching reports and goals themselves: whereas the
+early entries (circa 2021) are based on feel, the later are based more
+on student and grading feedback.</p>
+<p>Three examples of this practice:</p>
+<ol type="1">
+<li>I have run a mid-course evaluation survey in each of my last seven
+offerings of CS 330 (Fall 2022 through Winter 2026), which allows me to
+respond to student feedback the same semester it is given.</li>
+<li>I place the goals for a semester, distilled from feedback, in that
+semester’s entry, so that the later teaching report can be compared
+directly against the goals, tightening the connection between feedback
+and practice.</li>
+<li>The nature of my formal verification course (CS 401R, now CS 430)
+allows me to mechanically check how many proof obligations (the
+fundamental problem form) were satisfied relative to attempted and
+assigned.</li>
+</ol>
+<p>This practice has allowed me to see and in some cases quantify my
+growth. For example, the mid-course evaluation survey shows the rate of
+students who would describe lectures as “impenetrable” (word given to
+them) decline from a peak of 61% in Winter 2023 to 7% (1 of 15
+respondents) in Winter 2026. (At the same time, the rate of students
+that described lectures as “valuable” remained high.) This trend is
+concurrent with the adoption of new pedagogical techniques (see
+below).</p>
+<p>I have also grown by studying and adopting the pedagogical techniques
+of others grounded in the evidence-based learning literature. Addressing
+feedback that students did not feel completely comfortable asking
+questions, I instituted pedagogical techniques to remove structural
+impediments. For example, I explicitly instructed students to ask
+questions not only if they needed clarification, but if they could sense
+that anyone might need clarification, which decreases the exposure of
+anyone asking a question. I particularly like such policies because they
+genuinely increase the amount of learning that occurs and the sense of
+belonging that students feel while it does.</p>
+<p>Over the course of my record keeping, my view of what experience my
+course could offer students has expanded. While my courses have always
+incorporated prayer, beginning Fall 2022 I incorporated a few
+once-a-week practices not directly related to the course material. For
+example, one of these practices is “lifehack Thursday” in which the
+floor is open to share or report on academic, spiritual, and general
+lifehacks. Through the mid-course evaluation survey, many
+students—unprompted—attested to the value of these practices and several
+students corroborated this sentiment out-of-band.</p>
+<p>I adjust the course substantially each summer and feedback allows me
+to detect issues. For instance, students reported a higher workload
+across 2025, due, I believe, to some new course tooling. As part of the
+adjustment this summer, I am reworking the tooling in response to some
+of the specific feedback students have given.</p>
+<p>I adjust in response to student feedback and also to the field
+moving, most markedly with the rise of coding agents. I have asked
+students about their use of coding assistants since Fall 2022, added
+course content relevant to that use, such as type systems, wrote an
+explicit AI policy in Fall 2025, and moved exams from take-home to
+in-class in Winter 2026. The graduate seminar ran on programming
+languages and coding agents this winter.</p>
+<h1 id="teaching-journal">Teaching Journal</h1>
+<p>The goals for a particular semester of a course are recorded next to
+the report for that course and labeled by the semester which produced
+them.</p>
+<p>Beginning Fall 2025, CS 430 is the officialized version of CS 401R;
+journal entries use the number in effect at the time.</p>
+<h2 id="standing-practices">Standing practices</h2>
+<ul>
+<li>Every class opens with a prayer (since Fall 2020)</li>
+<li>Students are encouraged to ask questions not only if they need
+clarification but if they can sense or imagine that others might need
+clarification (since Fall 2020)</li>
+<li>Once a week I share a brain teaser that breaks the ice and provokes
+a good mindset (since Fall 2022)</li>
+<li>Once a week I open the floor for academic, spiritual, and general
+lifehacks (“Lifehack Thursday”) (since Winter 2023)</li>
+<li>Students introduce themselves to each other each class before they
+discuss problems (since Fall 2023)</li>
+<li>Students hold up the number of fingers corresponding to the number
+of non-clarifying responses they’ve given (since Fall 2023)</li>
+<li>I ask questions until there are no more answers and not until the
+correct answer is given (since Fall 2023)</li>
+</ul>
+<p>Across my seven surveyed offerings of CS 330, 24 respondents have
+named brain teasers and 17 have named Lifehack Thursday as positive
+aspects of the course that should be kept. (These were totally
+unprompted—the survey doesn’t name or ask about either.) I have had
+several students communicate privately later that a particular lifehack
+has been extremely valuable to them.</p>
+<h2 id="winter-2027">Winter 2027</h2>
+<h3 id="cs-601r">CS 601R</h3>
+<h4 id="goals">Goals</h4>
+<p>From Winter 2026</p>
+<p>Student Learning</p>
+<p>I expect that, by the next time I run this course, there will have
+been significant shifts in the practice and usage of coding agents that
+will bear on programming languages theories and models in interesting
+ways. As a consequence, I believe that running the course with the same
+theme would yield something meaningfully different.</p>
+<p>Learning Environment</p>
+<p>I received solid feedback about the learning environment. I will
+maintain the structure and tone of discussions.</p>
+<h2 id="fall-2026">Fall 2026</h2>
+<h3 id="cs-330">CS 330</h3>
+<h4 id="goals-1">Goals</h4>
+<p>From Winter 2026</p>
+<p>Student Learning</p>
+<p>The thrust of the course has to change. It can no longer be about how
+programming languages are the interface for a developer; instead, it
+must be about how the particular features and constraints of a given
+programming language affect the kinds of guarantees one can claim about
+agent-generated code.</p>
+<p>Learning Environment</p>
+<p>The class setting is going to look more like a lab in the sense that
+students will be oriented and then run experiments. An obvious failure
+mode is an experimental setup that permits no agency nor any meaningful
+prediction, but I think that will be avoided by the fact that there are
+many different ways to express specifications and, for any given
+specification, write code that meets them.</p>
+<p>Processes of Improvement</p>
+<p>I am updating the tooling of the course in accordance with the change
+in thrust. Specifically, the students will use a new language with
+familiar syntax and semantics but that has the warts of existing
+languages smoothed off. Those warts will then be used as case studies to
+illustrate considerations that must be made in the “real world” when
+applying the techniques that they learn in a more idealized setting. The
+design, which allows the language to be interpreted with static and
+dynamic constraints, is settled; most of its implementation is complete
+as well.</p>
+<p>I need to make sure I encourage completing the course surveys and
+student ratings.</p>
+<h3 id="cs-430">CS 430</h3>
+<h4 id="goals-2">Goals</h4>
+<p>From Fall 2025</p>
+<p>Student Learning</p>
+<p>We must do more exercises in class, but they must still read the
+material beforehand. They need multiple, spaced exposures to the proof
+concepts and expert guidance to learn how to apply them.</p>
+<p>Learning Environment</p>
+<p>Rather than demonstrate a proof outright, I think I will have each
+student come to the front and “drive” while the class talks them through
+an exercise. It’s not a perfect solution, but it does provide students
+with a bit of cover when they get stuck.</p>
+<h2 id="winter-2026">Winter 2026</h2>
+<h3 id="cs-330-1">CS 330</h3>
+<h4 id="goals-3">Goals</h4>
+<p>From Fall 2025</p>
+<p>Student Learning</p>
+<p>Students are not as able as I expect to organize the information in
+each unit into a mental framework. I will provide for each unit a
+scaffolding that reflects the hierarchy and relationships between
+concepts.</p>
+<p>Learning Environment</p>
+<p>I will provide more opportunities to work in partnerships and groups,
+but also ensure that they are sufficiently primed for any task I give
+them.</p>
+<h4 id="teaching-report">Teaching Report</h4>
+<p>In this run of the course (in part due to the existence of AI tools),
+exams that were previously take-home were administered in class.</p>
+<p>Student Learning</p>
+<ol type="1">
+<li><p>What went well? I added additional “cheat sheets” for each unit
+and called their attention to existing ones to provide a scaffolding for
+concepts. I adjusted the course offering to provide more content on type
+systems, which is especially relevant in the current environment. The
+lowest fraction (7% of 15 respondents) of students described lectures in
+the mid-course survey as “impenetrable”.</p></li>
+<li><p>What could be improved? This run of the course came in the wake
+of Claude Code, which was a specific and clear example of agent
+programming where the user isn’t required to look at the code. The
+existence of this example significantly damaged the premise of the class
+that, as software developers, programming languages would be their
+primary communication medium of software construction.</p></li>
+</ol>
+<p>Learning Environment</p>
+<ol type="1">
+<li>What went well? I had many more exercises and activities where class
+members talked to each other and that seemed to regularly break the ice
+among the students.</li>
+<li>What could be improved? Whether or not it was due to the existence
+of Claude Code or coding-agent and AI trends more generally, I had many
+more students not come to class than in previous semesters. I had fairly
+low turnout of student ratings (48%) relative to past semesters.</li>
+</ol>
+<h3 id="cs-601r-1">CS 601R</h3>
+<h4 id="teaching-report-1">Teaching Report</h4>
+<p>This run of the course was rocked similarly to 330. Consequently,
+this semester was devoted to topics and readings at the intersection of
+programming languages and LLM-based coding agents. When this plan was
+presented to students on the first day of class, they lamented requiring
+relevance to coding agents would be too limiting. This fear was
+unfounded, fortunately, and the set of allowable topics remained
+satisfyingly broad. Moreover, the LLM context grounded class discussion
+in a particular and fruitful way.</p>
+<p>Student Learning</p>
+<ol type="1">
+<li>What went well? We covered a lot of interesting and cutting edge
+concepts.</li>
+<li>What could be improved? It would be good (if possible) to nail down
+all material up front rather than having it driven by student
+interest.</li>
+</ol>
+<p>Learning Environment</p>
+<ol type="1">
+<li>What went well? The engagement and daily class discussions were
+excellent.</li>
+<li>What could be improved? Sometimes the discussions become a bit
+ungrounded and it would be good to maintain a grounding mechanism.</li>
+</ol>
+<h2 id="fall-2025">Fall 2025</h2>
+<h3 id="cs-330-2">CS 330</h3>
+<h4 id="goals-4">Goals</h4>
+<p>From Fall 2024</p>
+<ol type="1">
+<li>Provide students more and more-consistent opportunities to work
+problems in class, alone, with a partner, in groups, and as an entire
+class. Iterate collaboration at these various levels to shepherd
+students at different levels of understanding through the same
+content.</li>
+<li>Unify the two approaches to programming languages the class has
+offered historically–interpreters (implementer-perspective) and concepts
+(user-perspective)–by having students gradually modify the interpreters
+to support the standard model of programming languages seen in the other
+perspective. Present an understanding of this unified view as a main
+course objective.</li>
+<li>Systematically and incidentally connect the course topic to their
+regular programming practice, and facilitate this by using a less-alien
+language (which some student ratings comments mentioned).</li>
+</ol>
+<h4 id="teaching-report-2">Teaching Report</h4>
+<p>An improvement that I attempted for fall semester was to cleanly
+separate the syntax of the implementing and implemented languages, which
+helps students see the act of interpretation more clearly. There were
+some hiccups that made this a bit of a bumpy experience, mostly due to
+providing them the right tooling. With the right tooling in place, I am
+confident about the approach for the coming semesters.</p>
+<p>I have vacillated between letting the students choose their own
+language and standardizing on a language that forces them to learn a new
+way of programming. Unfortunately, each has their advantages and
+distinct disadvantages. Moving forward, I expect to maintain a uniform
+language in the class since (i) it gives the students enough exposure to
+internalize the new way, and (ii) it allows for a more systematic and
+deep grading process, since I can make comments about code organization
+that will apply generally.</p>
+<p>I also introduced an explicit AI policy that affirms the usefulness
+of these tools but restricts their use in the course, on the grounds
+that using them well requires a base of domain knowledge that the course
+exists to build.</p>
+<p>I encouraged the class members to fill out the intro survey and
+mid-course evaluation survey and student ratings.</p>
+<p>Student Learning</p>
+<ol type="1">
+<li>What went well? I attempted to unify the two approaches to
+programming languages the class has offered historically. The vast
+majority (95% of 19 students who opted to take it) of students aced the
+final. (It may look like there is a selection effect going on here, but
+many of the students who didn’t take it didn’t need to to get the grade
+they wanted.) This large majority, of course, could mean the final was
+too easy—and it may have been—but it did at least moderately test
+knowledge that a vast majority of students lacked coming in.</li>
+<li>What could be improved? I dedicated some time in the class on review
+that otherwise would have gone toward delivering the punchline and was
+unable to give them an assignment where they made the connection
+themselves. Mid-course responses describing the lectures as
+“impenetrable” rose to 27% of 22 respondents, from 15% of 26 in the
+winter offering.</li>
+</ol>
+<p>Learning Environment</p>
+<ol type="1">
+<li>What went well? I was able to provide students more and
+more-consistent opportunities to work problems in class, alone, with a
+partner, in groups, and as an entire class, especially at the beginning
+of the semester.</li>
+<li>What could be improved? The practice needs to be consistent through
+the end of the semester. Students reporting the workload as “about what
+is reasonable for a 3-credit course” fell to 54% of 26 respondents in
+winter and 50% of 22 in fall, from 85% of 33 in Winter 2024; I attribute
+this trend in part to a bit of friction of the course tooling.</li>
+</ol>
+<h3 id="cs-430-1">CS 430</h3>
+<h4 id="goals-5">Goals</h4>
+<p>From Fall 2024 (taught as CS 401R)</p>
+<ol type="1">
+<li>Motivate and foreshadow concepts before they are encountered in just
+reading or exercises</li>
+<li>More opportunities for feedback about proof style and technique in
+assignments and in class</li>
+</ol>
+<h4 id="teaching-report-3">Teaching Report</h4>
+<p>Student Learning</p>
+<ol type="1">
+<li>What went well? Students closed 88% (611 of 694) of assigned proof
+obligations and 53% (1412 of 2665) of <em>unassigned</em> proof
+obligations. (The nature of the assignments allows me to mechanically
+check, and proving things in this system is really fun.)</li>
+<li>What could be improved? I need to make the foreshadowing deliberate
+to ensure that it happens.</li>
+</ol>
+<p>Learning Environment</p>
+<ol type="1">
+<li>What went well? I had fewer and lower requirements to come to the
+front of the class.</li>
+<li>What could be improved? Unfortunately, I didn’t recognize until late
+how much of a bead this gave me on the progress of individual
+students.</li>
+</ol>
+<h3 id="professional-development">Professional Development</h3>
+<p>I read Shriram Krishnamurthi’s “Pedagogy Recommendations” in December
+2025. He recommends many books, several of them because they are
+explicitly evidence-based, and I looked at several of them:</p>
+<ul>
+<li>The ABCs of How We Learn</li>
+<li>Understanding How We Learn: a Visual Guide</li>
+<li>The Teaching Gap</li>
+<li>Scienceblind</li>
+</ul>
+<p>This post also reviews some of the techniques that he uses and that I
+adopted after observing his teaching a few years ago:</p>
+<ul>
+<li>think-pair-share</li>
+<li>finger counts when raising hands</li>
+<li>taking answers until students have no more to give and not merely
+taking answers until they’re correct</li>
+</ul>
+<h4 id="for-cs-430">For CS 430</h4>
+<p>I also participated and presented in a seminar offered by the math
+department on using the Lean tool to formalize mathematics. Lean is very
+similar to Rocq, the tool used in CS 430. Many students participated as
+well in the seminar with a range of math and CS backgrounds.</p>
+<h2 id="winter-2025">Winter 2025</h2>
+<h3 id="cs-330-3">CS 330</h3>
+<h4 id="teaching-report-4">Teaching Report</h4>
+<p>I updated my intro survey to ask more comprehensive questions about
+their use of LLMs and AI assistants to code.</p>
+<p>Student Learning</p>
+<ol type="1">
+<li><p>What went well? Mid-course survey: 15% of 26 respondents
+described the lectures as “impenetrable”—the lowest so far.</p></li>
+<li><p>What could be improved? Students reporting the workload as “about
+what is reasonable for a 3-credit course” fell to 54%, from 85% in
+Winter 2024.</p></li>
+</ol>
+<h2 id="fall-2024">Fall 2024</h2>
+<h3 id="cs-330-4">CS 330</h3>
+<h4 id="teaching-report-5">Teaching Report</h4>
+<p>One of my PhD students, Tim Whiting, taught the course. I helped him
+make substantial changes to the course, including those that introduced
+students to particular languages at key points in the course
+progression.</p>
+<h3 id="cs-401r">CS 401R</h3>
+<h4 id="goals-6">Goals</h4>
+<p>From Fall 2023</p>
+<ol type="1">
+<li>More opportunities for motivated students to go deeper with
+particular topics</li>
+<li>More feedback about proof style and technique in assignments</li>
+</ol>
+<h4 id="teaching-report-6">Teaching Report</h4>
+<p>I achieved both goals in 401R. I included more background reading as
+an out-of-class activity and assigned reflective, open-ended exercises
+as homework. In class, we reviewed many of these exercises. Having had
+the background exposure outside of class, we were able to go deeper on
+those topics, and thereby achieved the first goal. Additionally,
+students presented their solutions regularly at the beginning of class
+and we had discussions about their approaches and techniques, thereby
+achieving the second goal.</p>
+<p>Student Learning</p>
+<ol type="1">
+<li>What went well? Students went from essentially zero formal
+verification experience to proving non-trivial properties. The nature of
+the course allows me to mechanically check what fraction of proof
+obligation instances were closed: 70% of 3,989. One of the final
+projects also mechanized a paper from my research area (<em>Abstracting
+Abstract Machines</em>).</li>
+<li>What could be improved? Classroom discussion could introduce proof
+techniques earlier so that students have more than the textbook
+explanation before applying them in exercises</li>
+</ol>
+<p>Learning Environment</p>
+<ol type="1">
+<li>What went well? Had students come up to the front to complete
+exercises and present solutions which provided good feedback</li>
+<li>What could be improved? Some students may have been embarrassed
+going up to the front, and it would be good to provide a feedback
+channel that was less public</li>
+</ol>
+<h3 id="professional-development-1">Professional Development</h3>
+<p>I read research and retrospectives on the flipped classroom model to
+implement it in my PhD student’s run of 330. I applied the model in 401R
+by moving baseline material out of class so that we had more
+time/bandwidth for more open-ended exercises.</p>
+<h2 id="winter-2024">Winter 2024</h2>
+<h3 id="cs-330-5">CS 330</h3>
+<h4 id="goals-7">Goals</h4>
+<p>From Fall 2023</p>
+<ol type="1">
+<li>Convey the foundational framework more explicitly</li>
+<li>Maintain the pattern of in-class exercises on which students can
+work together</li>
+<li>Introduce students to new languages and features more
+systematically</li>
+</ol>
+<h4 id="teaching-report-7">Teaching Report</h4>
+<p>I succeeded in the first two goals. To achieve the first, I oriented
+a thread of the course around a standard model of languages. To achieve
+the second, I planned in-class exercises to do regularly throughout the
+semester and administered them.</p>
+<p>Student Learning</p>
+<ol type="1">
+<li>What went well? Based on their performance, many of the students
+understand programming language concepts from an implementation and user
+perspective According to the mid-course evaluation survey, 91% of
+students (of 33 respondents) found lectures “valuable”. The share
+describing them as “impenetrable” fell to 21%, from 61% of 38 the year
+before.</li>
+<li>What could be improved? A legible course purpose/theme. Based on
+student ratings comments, many students didn’t understand the purpose of
+the class nor perceived any overarching theme</li>
+</ol>
+<p>Learning Environment</p>
+<ol type="1">
+<li>What went well? A wide variety and significant fraction of students
+asked questions and contributed, which I encouraged.</li>
+<li>What could be improved? The amount of scaffolding that students are
+given. According to student ratings comments, when asking students to
+work in partnerships or groups, many felt lost and then, seeing their
+partner/group was lost too, frustrated.</li>
+</ol>
+<h2 id="fall-2023">Fall 2023</h2>
+<h3 id="cs-330-6">CS 330</h3>
+<h4 id="goals-8">Goals</h4>
+<p>From Fall 2022</p>
+<ol type="1">
+<li>More in-class exercises</li>
+<li>More explicit models (in both senses)</li>
+<li>More concrete connections to “mainstream PL”</li>
+</ol>
+<h4 id="teaching-report-8">Teaching Report</h4>
+<p>The textbook I use for 330 had a substantially-revised edition
+released at the beginning of 2023. I adjusted 330 over the summer to use
+this edition.</p>
+<p>I believe I met the goals I set out to:</p>
+<ol type="1">
+<li>The class had significantly more in-class exercises that students
+worked on individually, in small groups, and as a class.</li>
+<li>The class introduced a standard model of programming languages that
+acted as a through line in the course to discuss various language
+features and implementation techniques.</li>
+<li>Finally, the course had many more in-class exercises and
+outside-class assignments that had students explore topics relative to
+concrete programming practice.</li>
+</ol>
+<p>I feel that the adjustments I made neglected to offer a foundational
+framework that students can use to analyze languages and features. As a
+result, students had more experience and knowledge about a variety of
+features, but do not have the intellectual tools to analyze their
+interactions or analyze novel features.</p>
+<p>Student Learning</p>
+<ol type="1">
+<li>What went well? The vast majority of students became fluent in
+functional programming. According to the mid-course evaluation survey,
+only 36% of 25 respondents found lectures “impenetrable”, compared to
+61% of 38 in winter 2023.</li>
+<li>What could be improved? The foundational framework could be conveyed
+more explicitly and integrated more into assignments. The course should
+expand students’ experience with programming languages more than it
+does, in addition to unifying their programming experience (gleaned from
+a mid-course evaluation survey).</li>
+</ol>
+<p>Learning Environment</p>
+<ol type="1">
+<li>What went well? A wide variety and significant fraction of students
+asked questions and contributed, which I encouraged. Several (six)
+students also explicitly mentioned lifehacks and brain teasers as being
+valuable in the mid-course evaluation survey.</li>
+<li>What could be improved? In the latter half of the semester, I did
+not have as many in-class exercises that students could work on in
+groups.</li>
+</ol>
+<h3 id="cs-401r-1">CS 401R</h3>
+<h4 id="goals-9">Goals</h4>
+<p>From Fall 2022</p>
+<ol type="1">
+<li>More opportunities throughout semester to formulate properties</li>
+<li>Need to give students smaller venues in class (like groups or
+partnerships) to voice questions and solidify understanding</li>
+</ol>
+<h4 id="teaching-report-9">Teaching Report</h4>
+<p>The textbook I use for this course is superb, and I saw the
+phenomenon of students working ahead more prominently this semester.
+This phenomenon complicates lecture because some students are working
+through the material for the first time, while others are far ahead. I
+definitely do not want to discourage more engagement with the material.
+I think a good response might be to create supplementary material for
+each unit that students can use to dive deeper without forging ahead. I
+mechanically checked that four students closed 72% of 1,829
+proof-obligation instances.</p>
+<h3 id="professional-development-2">Professional Development</h3>
+<p>I worked with Shriram Krishnamurthi to gain access to his course for
+his new textbook and studied his practices as an instructor. He
+incorporates several practices that I will adopt, such as:</p>
+<ul>
+<li>having students talk to each other about the answer to a question
+before opening up the floor</li>
+<li>having students introduce themselves to each other before chatting
+with each other</li>
+<li>getting answers until there are no more answers instead of answers
+until the correct one is given</li>
+<li>having students hold up the number of fingers corresponding to how
+many times they have made a comment that day</li>
+</ul>
+<p>I also derived material from his textbook and assignments and worked
+with him on shared course infrastructure.</p>
+<h2 id="winter-2023">Winter 2023</h2>
+<h3 id="cs-330-7">CS 330</h3>
+<h4 id="teaching-report-10">Teaching Report</h4>
+<p>I introduced a new practice where, once a week, I open the floor for
+students to share academic, spiritual, and general lifehacks. I offer
+nominal extra credit to students who use this opportunity to report on
+lifehacks they have tried and to students whose lifehacks were tried. I
+got good feedback about this and will continue the practice.</p>
+<h3 id="cs-601r-2">CS 601R</h3>
+<h4 id="goals-10">Goals</h4>
+<p>From Winter 2022</p>
+<p>Have students implement PL artifacts to gain deeper understanding and
+connection with their regular programming. Twofold purpose: (1) use own
+model as framework for new knowledge, validated by implementation; (2)
+allow students to speak from experience and appeal to authority
+less.</p>
+<h4 id="teaching-report-11">Teaching Report</h4>
+<p>This class is organized around discussions of PL papers where
+students take turns leading the discussion. As many students who take
+this class do not have a PL background, it is easy for the discussion
+lead to have no more insight or grasp than other class members. To
+remedy this, I required discussion leads to implement an artifact from
+the paper before the discussion which they could then demonstrate to add
+more context to the discussion. My perception is that discussion leads
+this semester had a much firmer grasp on the substance of the paper and
+were able to speak more from practice to address student questions.</p>
+<h2 id="fall-2022">Fall 2022</h2>
+<h3 id="cs-330-8">CS 330</h3>
+<h4 id="goals-11">Goals</h4>
+<p>From Fall 2021</p>
+<p>My goal for 330 is to make a class that students love and feel is
+relevant. I intend to do this by reorganizing the course to have
+smaller, more regular assignments which are more focused and directed
+than previously.</p>
+<h4 id="teaching-report-12">Teaching Report</h4>
+<p>I reorganized 330 as described and it appeared to be much more
+manageable for students across the board. I need to draw connections
+more explicitly so that students (across the board) can see the
+relevance. I reworked my intro survey and ask about use of GitHub
+Copilot. I incorporated a mid-course evaluation survey that I will run
+each semester to be able to respond to feedback within the same
+semester. I started to do brain teasers once a week for a variety of
+reasons.</p>
+<p>Student Learning</p>
+<ol type="1">
+<li>What went well? The vast majority of students became fluent in
+functional programming. The mid-course evaluation survey revealed that
+44% of 27 respondents considered the lectures “impenetrable.” (The word
+was a given option.)</li>
+<li>What could be improved? Some of the assignments are not apparently
+connected to their regular programming practice. The mid-course
+evaluation survey revealed that 44% of 27 respondents considered the
+lectures “impenetrable.”</li>
+</ol>
+<p>Learning Environment</p>
+<ol type="1">
+<li>What went well? A broad swath of students were willing to ask
+questions in class.</li>
+<li>What could be improved? Some lectures didn’t require students to
+take an active role.</li>
+</ol>
+<h3 id="cs-401r-2">CS 401R</h3>
+<h4 id="goals-12">Goals</h4>
+<p>From Fall 2021</p>
+<p>Give the students more opportunities to formalize software
+properties.</p>
+<h4 id="teaching-report-13">Teaching Report</h4>
+<p>I gave 401R students more opportunities to formalize software
+properties by creating some lab-type lectures. It went well.</p>
+<p>Student Learning</p>
+<ol type="1">
+<li>What went well? Students went from essentially zero formal
+verification experience to proving non-trivial properties Four students
+closed 75% of 1,708 proof-obligation instances.</li>
+<li>What could be improved? Students need more opportunities to
+formulate properties throughout the course.</li>
+</ol>
+<p>Learning Environment</p>
+<ol type="1">
+<li>What went well? Had many lab-style lectures which built skills
+efficiently.</li>
+<li>What could be improved? Some students afraid of asking questions
+because they thought their classmates understood.</li>
+</ol>
+<h2 id="winter-2022">Winter 2022</h2>
+<h3 id="cs-601r-3">CS 601R</h3>
+<h4 id="goals-13">Goals</h4>
+<p>From Winter 2021</p>
+<p>My goal for 601R is to prepare PL grad students to do research and
+non-PL grad students to access the PL literature in their own
+research.</p>
+<h4 id="teaching-report-14">Teaching Report</h4>
+<p>My 601R goal was ill-formed because I did not/could not observe the
+students’ ability to access the PL literature in their research.</p>
+<p>Student Learning</p>
+<ol type="1">
+<li>What went well? Students were exposed to a wide variety of cutting
+edge PL topics</li>
+<li>What could be improved? Students need a better framework to organize
+and arrange the knowledge from this exposure</li>
+</ol>
+<p>Learning Environment</p>
+<ol type="1">
+<li>What went well? Lots of discussion and engagement.</li>
+<li>What could be improved? Some students w/o PL background were
+intimidated by others with, and the class should foster their
+willingness to speak up.</li>
+</ol>
+<h2 id="fall-2021">Fall 2021</h2>
+<h3 id="cs-330-9">CS 330</h3>
+<h4 id="goals-14">Goals</h4>
+<p>From Fall 2020</p>
+<p>Streamline the experience for students. My reviews indicate (to me)
+that I need to find better ways to explain certain concepts and a better
+way to convey the course organization. I have made explicit changes in
+the course to address each and look forward to seeing the effect.</p>
+<h4 id="teaching-report-15">Teaching Report</h4>
+<p>I attempted to organize 330 around a large interpreter project, but
+shifted to a traditional course midway through the semester.</p>
+<h3 id="cs-401r-3">CS 401R</h3>
+<h4 id="goals-15">Goals</h4>
+<p>From Fall 2020</p>
+<p>Publicize it effectively to get more students. I think my 330 courses
+will offer a bit of a pipeline, but I would like to reach out more
+broadly too.</p>
+<h4 id="teaching-report-16">Teaching Report</h4>
+<p>I had a higher initial enrollment for my 401R class but several
+students dropped early on. I followed up with them. Some students
+dropped because they felt unprepared (not having taken 330), and two
+dropped because they didn’t need the credit. Seven students finished the
+term, closing 64% of attempted proof obligations.</p>
+</body>
+</html>
